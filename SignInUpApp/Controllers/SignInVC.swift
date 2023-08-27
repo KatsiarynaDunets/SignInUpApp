@@ -10,7 +10,9 @@ import UIKit
 class SignInVC: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passTF: UITextField!
-    @IBOutlet weak var errorLbl: UILabel!
+    @IBOutlet weak var errorLbl: UILabel! {
+        didSet { errorLbl.isHidden = true }
+           }
     @IBOutlet weak var signInBtn: UIButton!
     
     override func viewDidLoad() {
@@ -20,16 +22,8 @@ class SignInVC: UIViewController {
     private func setupUI() {
         signInBtn.isEnabled = false
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+}
+/// продолжение нашего класса
+/// в extension могут быть только методы
+extension SignInVC {
 }

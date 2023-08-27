@@ -15,6 +15,10 @@
 		522416342A96ABF100AC065D /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522416332A96ABF100AC065D /* SignInStoryboard.storyboard */; };
 		522416362A96AD3000AC065D /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522416352A96AD3000AC065D /* SignUpStoryboard.storyboard */; };
 		522416392A96B78400AC065D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416382A96B78400AC065D /* SignInVC.swift */; };
+		5224163B2A9AA4E500AC065D /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224163A2A9AA4E500AC065D /* CreateAccountVC.swift */; };
+		5224163D2A9AAC4600AC065D /* VerificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224163C2A9AAC4600AC065D /* VerificationsVC.swift */; };
+		522416402A9AAD3A00AC065D /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224163F2A9AAD3A00AC065D /* UIViewControllerExt.swift */; };
+		522416432A9AB7A300AC065D /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416422A9AB7A300AC065D /* VerificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		522416332A96ABF100AC065D /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
 		522416352A96AD3000AC065D /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		522416382A96B78400AC065D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		5224163A2A9AA4E500AC065D /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		5224163C2A9AAC4600AC065D /* VerificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationsVC.swift; sourceTree = "<group>"; };
+		5224163F2A9AAD3A00AC065D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		522416422A9AB7A300AC065D /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,8 @@
 		5224161C2A96A8FF00AC065D /* SignInUpApp */ = {
 			isa = PBXGroup;
 			children = (
+				522416412A9AB77500AC065D /* Services */,
+				5224163E2A9AAD0600AC065D /* Extesions */,
 				522416372A96B75700AC065D /* Controllers */,
 				522416312A96AB2700AC065D /* Views */,
 				522416262A96A90000AC065D /* Assets.xcassets */,
@@ -93,8 +103,26 @@
 			isa = PBXGroup;
 			children = (
 				522416382A96B78400AC065D /* SignInVC.swift */,
+				5224163C2A9AAC4600AC065D /* VerificationsVC.swift */,
+				5224163A2A9AA4E500AC065D /* CreateAccountVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5224163E2A9AAD0600AC065D /* Extesions */ = {
+			isa = PBXGroup;
+			children = (
+				5224163F2A9AAD3A00AC065D /* UIViewControllerExt.swift */,
+			);
+			path = Extesions;
+			sourceTree = "<group>";
+		};
+		522416412A9AB77500AC065D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				522416422A9AB7A300AC065D /* VerificationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522416432A9AB7A300AC065D /* VerificationService.swift in Sources */,
+				5224163D2A9AAC4600AC065D /* VerificationsVC.swift in Sources */,
 				5224161E2A96A8FF00AC065D /* AppDelegate.swift in Sources */,
+				522416402A9AAD3A00AC065D /* UIViewControllerExt.swift in Sources */,
 				522416202A96A8FF00AC065D /* SceneDelegate.swift in Sources */,
+				5224163B2A9AA4E500AC065D /* CreateAccountVC.swift in Sources */,
 				522416392A96B78400AC065D /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

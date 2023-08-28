@@ -8,23 +8,23 @@
 import UIKit
 
 class CreateAccountVC: UIViewController {
-    //email
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var errorEmailLbl: UILabel!
-    //name
-    @IBOutlet weak var nameTF: UITextField!
-    //password
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var errorPassLbl: UILabel!
-    //pass indicators
+    // email
+    @IBOutlet var emailTF: UITextField!
+    @IBOutlet var errorEmailLbl: UILabel!
+    // name
+    @IBOutlet var nameTF: UITextField!
+    // password
+    @IBOutlet var passwordTF: UITextField!
+    @IBOutlet var errorPassLbl: UILabel!
+    // pass indicators
     @IBOutlet var strongPassIndicatorsViews: [UIView]!
-    //confirm
-    @IBOutlet weak var ConfPassTF: UITextField!
-    @IBOutlet weak var errorConfPassLbl: UILabel!
-    //Continue button
-    @IBOutlet weak var continueBtn: UIButton!
-    //scrollView
-    @IBOutlet weak var scrollView: UIScrollView!
+    // confirm
+    @IBOutlet var ConfPassTF: UITextField!
+    @IBOutlet var errorConfPassLbl: UILabel!
+    // Continue button
+    @IBOutlet var continueBtn: UIButton!
+    // scrollView
+    @IBOutlet var scrollView: UIScrollView!
     
     private var isValidEmail = false { didSet { updateContinueBtnState() } }
     private var isConfPass = false { didSet { updateContinueBtnState() } }
@@ -33,18 +33,20 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         strongPassIndicatorsViews.forEach { view in view.alpha = 0.2 }
-        hideKeyboardWhenTappedAround()
+        // hideKeyboardWhenTappedAround()
         startKeyboardObserver()
     }
     
     @IBAction func emailTFAction(_ sender: UITextField) {
-        //to check this action:
-       //print(sender.text)
+        // to check this action:
+        // print(sender.text)
         if let email = sender.text,
            !email.isEmpty,
-           //email verification
-           VerificationService.isValidEmail(email: email) {
+           // email verification
+           VerificationService.isValidEmail(email: email)
+        {
             isValidEmail = true
+            // print(isValidEmail = true)
         } else {
             isValidEmail = false
         }
@@ -53,7 +55,8 @@ class CreateAccountVC: UIViewController {
     
     @IBAction func passTFAction(_ sender: UITextField) {
         if let passText = sender.text,
-           !passText.isEmpty {
+           !passText.isEmpty
+        {
             passwordStrength = VerificationService.isValidPassword(pass: passText)
             print(passwordStrength)
         } else {
@@ -68,7 +71,8 @@ class CreateAccountVC: UIViewController {
         if let confPassText = sender.text,
            !confPassText.isEmpty,
            let passText = passwordTF.text,
-           !passText.isEmpty {
+           !passText.isEmpty
+        {
             isConfPass = VerificationService.isPassConfirm(pass1: passText, pass2: confPassText)
         } else {
             isConfPass = false
@@ -77,28 +81,29 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func signInAction() {
-//        navigationController?.popToRootViewController(animated: true)
+//        navigationController?.popToRootViewController(animated: true) to the fisrst screen
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func continueAction() {
         if let email = emailTF.text,
-           let pass = passwordTF.text {
+           let pass = passwordTF.text
+        {
             let userModel = UserModel(name: nameTF.text, email: email, pass: pass)
             performSegue(withIdentifier: "goToVerifScreen", sender: userModel)
         }
     }
     
     private func setupStrongIndicatorsViews() {
-        /*
-        for (index, view) in strongPassIndicatorsViews.enumerated() {
-            if index <= (passwordStrength.rawValue - 1) {
-                view.alpha = 1
-            } else {
-                view.alpha = 0.2
-            }
-        }
-        */
+        /* как раскрасить вьюшки:
+         for (index, view) in strongPassIndicatorsViews.enumerated() {
+             if index <= (passwordStrength.rawValue - 1) {
+                 view.alpha = 1
+             } else {
+                 view.alpha = 0.2
+             }
+         }
+         */
         // тоже самое но через forEach
         strongPassIndicatorsViews.enumerated().forEach { index, view in
             if index <= (passwordStrength.rawValue - 1) {
@@ -112,7 +117,6 @@ class CreateAccountVC: UIViewController {
     private func updateContinueBtnState() {
         continueBtn.isEnabled = isValidEmail && isConfPass && passwordStrength != .veryWeak
     }
-    
     
     private func startKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -134,7 +138,6 @@ class CreateAccountVC: UIViewController {
         scrollView.scrollIndicatorInsets = contentInsets
     }
     
-
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

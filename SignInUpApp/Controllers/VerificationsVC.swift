@@ -8,30 +8,30 @@
 import UIKit
 
 class VerificationsVC: BaseViewController {
-    
     var userModel: UserModel?
     let randomInt = Int.random(in: 100000 ... 999999)
-    var sleepTime = 3
+    var sleepTime = 5
 
-    @IBOutlet weak var infoLbl: UILabel!
-    @IBOutlet weak var codeTF: UITextField!
-    @IBOutlet weak var errorCodeLbl: UILabel!
-    @IBOutlet weak var centerYConstraint: NSLayoutConstraint!
+    @IBOutlet var infoLbl: UILabel!
+    @IBOutlet var codeTF: UITextField!
+    @IBOutlet var errorCodeLbl: UILabel!
+    
+    @IBOutlet var centerYConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         hideKeyboardWhenTappedAround()
         startKeyboardObserver()
     }
     
-    
     @IBAction func codeTFAction(_ sender: UITextField) {
         errorCodeLbl.isHidden = true
         guard let text = sender.text,
               !text.isEmpty,
-              text == randomInt.description else {
-            
+              text == randomInt.description
+        else {
             errorCodeLbl.isHidden = false
             sender.isUserInteractionEnabled = false
             errorCodeLbl.text = "Error code. Please wait \(sleepTime) seconds"

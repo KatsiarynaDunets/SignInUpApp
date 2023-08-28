@@ -21,6 +21,7 @@
 		522416432A9AB7A300AC065D /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416422A9AB7A300AC065D /* VerificationService.swift */; };
 		522416462A9D22C700AC065D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416452A9D22C700AC065D /* UserModel.swift */; };
 		522416482A9D3A3C00AC065D /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416472A9D3A3C00AC065D /* WelcomeVC.swift */; };
+		5224164B2A9D55FF00AC065D /* MyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 522416492A9D55FF00AC065D /* MyModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		522416422A9AB7A300AC065D /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		522416452A9D22C700AC065D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		522416472A9D3A3C00AC065D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		5224164A2A9D55FF00AC065D /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				522416452A9D22C700AC065D /* UserModel.swift */,
+				522416492A9D55FF00AC065D /* MyModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				522416432A9AB7A300AC065D /* VerificationService.swift in Sources */,
 				5224163D2A9AAC4600AC065D /* VerificationsVC.swift in Sources */,
 				522416462A9D22C700AC065D /* UserModel.swift in Sources */,
+				5224164B2A9D55FF00AC065D /* MyModel.xcdatamodeld in Sources */,
 				5224161E2A96A8FF00AC065D /* AppDelegate.swift in Sources */,
 				522416402A9AAD3A00AC065D /* UIViewControllerExt.swift in Sources */,
 				522416202A96A8FF00AC065D /* SceneDelegate.swift in Sources */,
@@ -438,6 +442,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		522416492A9D55FF00AC065D /* MyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5224164A2A9D55FF00AC065D /* MyModel.xcdatamodel */,
+			);
+			currentVersion = 5224164A2A9D55FF00AC065D /* MyModel.xcdatamodel */;
+			path = MyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 522416122A96A8FF00AC065D /* Project object */;
 }

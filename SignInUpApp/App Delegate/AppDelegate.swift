@@ -34,3 +34,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+import CoreData
+
+var persistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "MyModel") // Имя должно совпадать с именем вашего .xcdatamodeld файла
+    container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        if let error = error as NSError? {
+            fatalError("Unresolved error \(error), \(error.userInfo)")
+        }
+    })
+    return container
+}()
+
+func saveUser(userModel: UserModel) {
+    let context = persistentContainer.viewContext
+    let userEntity = NSEntityDescription.entity(forEntityName: "User", in: context)!
+    let user = NSManagedObject(entity: userEntity, insertInto: context)
+    
+    user.setValue(userModel.name, forKey: "name")
+    user.setValue(userModel.email, forKey: "email")
+    user.setValue(userModel.pass, forKey: "pass")
+    
+    do {
+        try context.save()
+    } catch let error as NSError {
+        print("Could not save. \(error), \(error.userInfo)")
+    }
+}
+
+func fetchUsers() -> [UserModel] {
+    let context = persistentContainer.viewContext
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+    var users: [UserModel] = []
+    
+    do {
+        let result = try context.fetch(request)
+        for data in result as! [NSManagedObject] {
+            let name = data.value(forKey: "name") as? String
+            let email = data.value(forKey: "email") as! String
+            let pass = data.value(forKey: "pass") as! String
+            
+            users.append(UserModel(name: name, email: email, pass: pass))
+        }
+    } catch {
+        print("Failed fetching")
+    }
+    
+    return users
+}

@@ -9,7 +9,12 @@ import UIKit
 
 class SignInVC: UIViewController {
     @IBOutlet var emailTF: UITextField!
-    @IBOutlet var passTF: UITextField!
+    @IBOutlet var passTF: UITextField! {
+        didSet {
+            passTF.tintColor = UIColor.lightGray
+            passTF.setIcon(UIImage(imageLiteralResourceName:"Image"))
+        }
+    }
     @IBOutlet var errorLbl: UILabel! {
         didSet { errorLbl.isHidden = true }
     }

@@ -22,6 +22,10 @@
 		522416462A9D22C700AC065D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416452A9D22C700AC065D /* UserModel.swift */; };
 		522416482A9D3A3C00AC065D /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416472A9D3A3C00AC065D /* WelcomeVC.swift */; };
 		5224164B2A9D55FF00AC065D /* MyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 522416492A9D55FF00AC065D /* MyModel.xcdatamodeld */; };
+		5224164D2A9FDABC00AC065D /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224164C2A9FDABC00AC065D /* UserDefaultService.swift */; };
+		5224164F2A9FDBFC00AC065D /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224164E2A9FDBFC00AC065D /* UserDefaultsExtension.swift */; };
+		522416512A9FE29000AC065D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416502A9FE29000AC065D /* TabBarController.swift */; };
+		522416532A9FEA9100AC065D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416522A9FEA9100AC065D /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		522416452A9D22C700AC065D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		522416472A9D3A3C00AC065D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		5224164A2A9D55FF00AC065D /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
+		5224164C2A9FDABC00AC065D /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
+		5224164E2A9FDBFC00AC065D /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		522416502A9FE29000AC065D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		522416522A9FEA9100AC065D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,9 @@
 				5224163E2A9AAD0600AC065D /* Extesions */,
 				522416372A96B75700AC065D /* Controllers */,
 				522416312A96AB2700AC065D /* Views */,
-				522416262A96A90000AC065D /* Assets.xcassets */,
 				522416322A96AB4600AC065D /* App Delegate */,
 				5224162B2A96A90000AC065D /* Info.plist */,
+				522416262A96A90000AC065D /* Assets.xcassets */,
 			);
 			path = SignInUpApp;
 			sourceTree = "<group>";
@@ -112,7 +120,9 @@
 				522416382A96B78400AC065D /* SignInVC.swift */,
 				5224163C2A9AAC4600AC065D /* VerificationsVC.swift */,
 				522416472A9D3A3C00AC065D /* WelcomeVC.swift */,
+				522416502A9FE29000AC065D /* TabBarController.swift */,
 				5224163A2A9AA4E500AC065D /* CreateAccountVC.swift */,
+				522416522A9FEA9100AC065D /* ProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				5224163F2A9AAD3A00AC065D /* UIViewControllerExt.swift */,
+				5224164E2A9FDBFC00AC065D /* UserDefaultsExtension.swift */,
 			);
 			path = Extesions;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				522416422A9AB7A300AC065D /* VerificationService.swift */,
+				5224164C2A9FDABC00AC065D /* UserDefaultService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -216,6 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				522416432A9AB7A300AC065D /* VerificationService.swift in Sources */,
+				522416512A9FE29000AC065D /* TabBarController.swift in Sources */,
+				522416532A9FEA9100AC065D /* ProfileVC.swift in Sources */,
+				5224164D2A9FDABC00AC065D /* UserDefaultService.swift in Sources */,
 				5224163D2A9AAC4600AC065D /* VerificationsVC.swift in Sources */,
 				522416462A9D22C700AC065D /* UserModel.swift in Sources */,
 				5224164B2A9D55FF00AC065D /* MyModel.xcdatamodeld in Sources */,
@@ -224,6 +239,7 @@
 				522416202A96A8FF00AC065D /* SceneDelegate.swift in Sources */,
 				522416482A9D3A3C00AC065D /* WelcomeVC.swift in Sources */,
 				5224163B2A9AA4E500AC065D /* CreateAccountVC.swift in Sources */,
+				5224164F2A9FDBFC00AC065D /* UserDefaultsExtension.swift in Sources */,
 				522416392A96B78400AC065D /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

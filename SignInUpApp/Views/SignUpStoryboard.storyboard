@@ -348,7 +348,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Start"/>
                                         <connections>
-                                            <action selector="continueAction" destination="0uJ-MT-8XH" eventType="touchUpInside" id="b4B-5T-WJg"/>
+                                            <segue destination="jV1-AH-SD0" kind="show" id="jlP-XJ-hpZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -369,6 +369,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXk-Tw-IC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1686" y="-29"/>
+        </scene>
+        <!--ProfileVC-->
+        <scene sceneID="BWi-r5-4WE">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ProfileVC" referencedIdentifier="ProfileVC" id="jV1-AH-SD0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Y8K-nu-kXk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wh3-t3-Yl9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2548" y="-202"/>
         </scene>
     </scenes>
     <resources>

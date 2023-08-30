@@ -14,22 +14,22 @@ class CreateAccountVC: UIViewController {
     // name
     @IBOutlet var nameTF: UITextField!
     // password
-    @IBOutlet var passwordTF: UITextField! {
-        didSet {
-            passwordTF.tintColor = UIColor.lightGray
-            passwordTF.setIcon(UIImage(imageLiteralResourceName:"Image"))
-        }
-    }
+    @IBOutlet var passwordTF: UITextField!
+//        didSet {
+//            passwordTF.tintColor = UIColor.lightGray
+//            passwordTF.setIcon(UIImage(imageLiteralResourceName:"Image"))
+//        }
+ //   }
     @IBOutlet var errorPassLbl: UILabel!
     // pass indicators
     @IBOutlet var strongPassIndicatorsViews: [UIView]!
     // confirm
-    @IBOutlet var ConfPassTF: UITextField! {
-        didSet {
-            ConfPassTF.tintColor = UIColor.lightGray
-            ConfPassTF.setIcon(UIImage(imageLiteralResourceName:"Image"))
-        }
-    }
+    @IBOutlet var ConfPassTF: UITextField!
+//        didSet {
+//            ConfPassTF.tintColor = UIColor.lightGray
+//            ConfPassTF.setIcon(UIImage(imageLiteralResourceName:"Image"))
+//        }
+//    }
     @IBOutlet var errorConfPassLbl: UILabel!
     // Continue button
     @IBOutlet var continueBtn: UIButton!

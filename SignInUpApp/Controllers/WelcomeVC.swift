@@ -17,11 +17,12 @@ class WelcomeVC: UIViewController {
     }
 
     @IBAction func continueAction() {
-        // TODO: sava data
+        guard let userModel = userModel else { return }
+        UserDafultsService.saveUserModel(userModel: userModel)
         navigationController?.popToRootViewController(animated: true)
     }
 
     private func setupUI() {
-        infoLbl.text = "\(userModel?.name ?? "") to our Nice App"
+        infoLbl.text = "\(userModel?.name ?? "") to our Sign App"
     }
 }
